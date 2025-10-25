@@ -7,5 +7,19 @@
         {% else %}
         <h2>Your are under 30, young</h2>
         {% endif %}
+        <h3>Our Gold customers</h3>
+        <ul>
+            {% for customer in customers %}
+            <li>{{customer.first_name}}{{ customer.last_name}}</li>
+            
+            {% endfor %}
+        </ul>
+        <h1>{{result.count}} - Price: {{result.price}}</h1>
+        
+        <!-- <ul>
+            {% for product in products %}
+            <li>{{ product.title }</li>
+            {% endfor%}
+        </ul> -->
     </body>
 </html>
